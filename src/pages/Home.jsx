@@ -84,27 +84,29 @@ const Home = () => {
           }}
         >
           <form onSubmit={onSearch}>
-            <Input
-              onChange={(e) => {
-                setTextSearch(e.target.value);
-              }}
-              width="100%"
-              value={textSearch}
-              margin="0px"
-              border="1px solid rgba(128, 128, 128)"
-              placeholder="Search"
-            />
-            <img
-              style={{
-                position: "absolute",
-                top: "17px",
-                left: "38%",
-                cursor: "pointer",
-              }}
-              src={searchIcon}
-              onClick={onSearch}
-              alt=""
-            />
+            <Container>
+              <Input
+                onChange={(e) => {
+                  setTextSearch(e.target.value);
+                }}
+                width="100%"
+                value={textSearch}
+                margin="0px"
+                border="1px solid rgba(128, 128, 128)"
+                placeholder="Search"
+              />
+              <img
+                style={{
+                  position: "absolute",
+                  top: "3px",
+                  right: "5px",
+                  cursor: "pointer",
+                }}
+                src={searchIcon}
+                onClick={onSearch}
+                alt=""
+              />
+            </Container>
           </form>
           <form
             style={{
